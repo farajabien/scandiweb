@@ -9,17 +9,21 @@ const Header = ({ onMassDelete, onSave, headerTitle }) => {
 			<h4>{headerTitle}</h4>
 			{location.pathname === '/add' ? (
 				<div className='page-buttons'>
-					<Link to='/'>
-						<button onClick={onSave}>Save</button>
-					</Link>
 					<button>Cancel</button>
+					<Link to='/'>
+						<button className='save' onClick={onSave}>
+							Save
+						</button>
+					</Link>
 				</div>
 			) : (
 				<div className='page-buttons'>
-					<button onClick={onMassDelete}>Mass Delete</button>
 					<Link to='/add'>
 						<button>Add</button>
 					</Link>
+					<button className='mass-delete' onClick={onMassDelete}>
+						Mass Delete
+					</button>
 				</div>
 			)}
 		</header>

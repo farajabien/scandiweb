@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+label{
+  display: block;
+  margin-top: 1em;
+}
+button{
+  color: white;
+  background-color: rgb(170, 170, 170);
+  font-weight: 900;
+}
+
+.save{
+  background-color: rgb(4, 4, 138);
+}
+.mass-delete{
+  background-color: rgb(90, 6, 6);
 }
