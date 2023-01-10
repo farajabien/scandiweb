@@ -24,9 +24,36 @@ button{
   cursor: pointer;
 }
 
-.save{
-  background-color: rgb(4, 4, 138);
+
+.add-btn, .save-btn{
+  background-color: #013220;
+    color: #fff;
+    margin-right: 2em;
+    padding: .5em;
 }
-.mass-delete{
-  background-color: rgb(90, 6, 6);
+
+.mass-delete-btn, .cancel-btn{
+  background-color: #8b0000;
+    color: #fff;
+    padding: .5em;
+}
+
+.product-list-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.product-list-item{
+  border: 1px solid #ccc;
+  padding: .5em;
+  margin-right: 1em;
+  min-width: 15em;
+  
+}
+
+.product-list-item-info{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }

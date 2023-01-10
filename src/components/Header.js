@@ -1,17 +1,26 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Header = ({ onMassDelete, onSave, headerTitle }) => {
 	const location = useLocation()
+	const navigate = useNavigate()
 
 	return (
 		<header>
 			<h4>{headerTitle}</h4>
 			{location.pathname === '/add' ? (
 				<div className='page-buttons'>
-					<button>Cancel</button>
+					<button
+						type='submit'
+						className='cancel-btn'
+						onClick={(e) => {
+							e.preventDefault()
+							navigate('/')
+						}}>
+						Cancel
+					</button>
 					<Link to='/'>
-						<button className='save' onClick={onSave}>
+						<button className='save-btn' onClick={onSave}>
 							SAVE
 						</button>
 					</Link>
@@ -19,10 +28,10 @@ const Header = ({ onMassDelete, onSave, headerTitle }) => {
 			) : (
 				<div className='page-buttons'>
 					<Link to='/add'>
-						<button>ADD</button>
+						<button className='add-btn'>ADD</button>
 					</Link>
 					<button
-						className='mass-delete'
+						className='mass-delete-btn'
 						id='delete-product-btn'
 						onClick={onMassDelete}>
 						MASS DELETE
