@@ -12,20 +12,20 @@ const Header = ({ onMassDelete, onSave, headerTitle }) => {
 					<button>Cancel</button>
 					<Link to='/'>
 						<button className='save' onClick={onSave}>
-							ADD
+							SAVE
 						</button>
 					</Link>
 				</div>
 			) : (
 				<div className='page-buttons'>
 					<Link to='/add'>
-						<button>Add</button>
+						<button>ADD</button>
 					</Link>
 					<button
 						className='mass-delete'
 						id='delete-product-btn'
 						onClick={onMassDelete}>
-						Mass Delete
+						MASS DELETE
 					</button>
 				</div>
 			)}

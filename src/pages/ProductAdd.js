@@ -61,7 +61,7 @@ function ProductAdd() {
 				<label>
 					Price:
 					<input
-						id='name'
+						id='price'
 						type='number'
 						value={product.price}
 						onChange={(event) =>
